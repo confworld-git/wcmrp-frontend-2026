@@ -321,7 +321,7 @@ const RegistrationFee = () => {
                 <tr key={i} className={`${i % 2 === 0 ? "bg-gray-100" : "bg-white"} text-sm font-[450]`}>
                   <td className="border-r border-gray-200 p-4">{item.category}{["Students","Students with Scopus Publication"].includes(item.category) && <span className="text-red-600">*</span>}</td>
                   <td className="border-r border-gray-200 p-4"><label className="line-through"><input disabled type="radio" name="price" onChange={() => handleBaseSelect(item.earlyBird, fee.title, item.category)} value={item.earlyBird} className="mr-2" />{item.earlyBird}</label></td>
-                  <td className="p-4 border-r border-gray-200"><label className={!isFinal ? "line-through text-gray-400" : ""}><input disabled={!isFinal} type="radio" name="price" onChange={() => handleBaseSelect(item.final, fee.title, item.category)} value={item.final} className="mr-2" />{item.final}</label></td>
+                  <td className="p-4 border-r border-gray-200"><label ><input type="radio" name="price" onChange={() => handleBaseSelect(item.final, fee.title, item.category)} value={item.final} className="mr-2" />{item.final}</label></td>
                   <td className="p-4"><label><input type="radio" name="price" onChange={() => handleBaseSelect(item.onsite, fee.title, item.category)} value={item.onsite} className="mr-2" />{item.onsite}</label></td>
                 </tr>
               ))}</tbody>
@@ -339,7 +339,7 @@ const RegistrationFee = () => {
                 <tr key={i} className={`${i % 2 === 0 ? "bg-gray-100" : "bg-white"} text-sm font-[450]`}>
                   <td className="border-r border-gray-200 p-4">{item.category}{["Students","Students with Scopus Publication"].includes(item.category) && <span className="text-red-600">*</span>}</td>
                   <td className="border-r border-gray-200 p-4"><label className="line-through"><input disabled type="radio" name="price" onChange={() => handleBaseSelect(item.earlyBird, fee.title, item.category)} value={item.earlyBird} className="mr-2" />{item.earlyBird}</label></td>
-                  <td className="p-4"><label className={!isFinal ? "line-through text-gray-400" : ""}><input disabled={!isFinal} type="radio" name="price" onChange={() => handleBaseSelect(item.final, fee.title, item.category)} value={item.final} className="mr-2" />{item.final}</label></td>
+                  <td className="p-4"><label ><input  type="radio" name="price" onChange={() => handleBaseSelect(item.final, fee.title, item.category)} value={item.final} className="mr-2" />{item.final}</label></td>
                 </tr>
               ))}</tbody>
             </table>
