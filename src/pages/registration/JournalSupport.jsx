@@ -44,7 +44,7 @@ const JournalSupport = ({ selectedJournal, setSelectedJournal }) => {
               <h3 className={`font-bold text-base mb-0.5 pr-8 ${isSelected ? "text-white" : "text-gray-800"}`}>{pkg.tier}</h3>
               <p className={`text-[10px] font-semibold uppercase tracking-widest mb-4 ${isSelected ? "text-indigo-100" : "text-gray-400"}`}>{pkg.package}</p>
               <div className="flex items-baseline gap-2 mb-1">
-                <span className="text-orange-400 text-xs font-semibold">⚡ Exclusive</span>
+                <span className="text-orange-400 text-xs font-semibold">⚡ Exclusive Offer</span>
                 <span className={`text-2xl font-extrabold ${isSelected ? "text-white" : "text-indigo-700"}`}>${pkg.specialPrice.toLocaleString()}</span>
               </div>
               <p className={`text-xs mb-5 ${isSelected ? "text-indigo-100" : "text-gray-400"}`}>
