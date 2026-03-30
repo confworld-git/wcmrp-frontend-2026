@@ -425,7 +425,7 @@ const RegistrationFee = () => {
               <button type="submit" className="w-full py-3.5 bg-gradient-to-r from-teal-600 to-teal-500 text-white font-bold text-base rounded-2xl hover:from-teal-500 hover:to-teal-600 transition-all shadow-md hover:shadow-lg">
                 Check Out (Open Payment Gateway)
               </button>
-              <p className="text-center text-gray-500 text-xs">*Please note that the payee is responsible for all bank charges.</p>
+              <p className="text-center text-gray-500 text-xs">*Please note that the payee is responsible for all bank charges</p>
             </div>
           </div>
         </form>
