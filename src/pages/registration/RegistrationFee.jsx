@@ -9,18 +9,28 @@ import logoImage from "../../assets/logo/logo1.webp";
 import JournalSupport from "./JournalSupport.jsx";
 import Addons from "./Addons.jsx";
 
-const calculatePricing = ({ baseAmount, participantCategory, hasMembership, hasCoupon }) => {
+const calculatePricing = ({ baseAmount, journalAmount = 0, addonsAmount = 0, participantCategory, hasMembership, hasCoupon }) => {
   const base = parseFloat(baseAmount);
+  const journal = parseFloat(journalAmount) || 0;
+  const addons = parseFloat(addonsAmount) || 0;
   const isStudent = participantCategory?.toLowerCase().includes("student");
   const membershipFeeAmount = isStudent ? 15 : 20;
+
   let membershipDiscount = 0, couponDiscount = 0, membershipFee = 0;
+
+  // Discounts apply to BASE ONLY
   if (hasMembership) { membershipDiscount = parseFloat((base * 0.05).toFixed(2)); membershipFee = membershipFeeAmount; }
-  if (hasCoupon) { couponDiscount = parseFloat((base * 0.05).toFixed(2)); }
+  if (hasCoupon)     { couponDiscount = parseFloat((base * 0.05).toFixed(2)); }
+
   const totalDiscount = parseFloat((membershipDiscount + couponDiscount).toFixed(2));
-  const afterDiscount = parseFloat((base - totalDiscount + membershipFee).toFixed(2));
-  const bankTax = parseFloat((afterDiscount * 0.060).toFixed(2));
-  const total = parseFloat((afterDiscount + bankTax).toFixed(2));
-  return { baseAmount: base, membershipDiscount, couponDiscount, totalDiscount, membershipFee, finalAmount: afterDiscount, bankTax, total };
+  const discountedBase = base - totalDiscount;
+
+  // Add journal + addons + membership AFTER discount
+  const finalAmount = parseFloat((discountedBase + journal + addons + membershipFee).toFixed(2));
+  const bankTax = parseFloat((finalAmount * 0.060).toFixed(2));
+  const total = parseFloat((finalAmount + bankTax).toFixed(2));
+
+  return { baseAmount: base, membershipDiscount, couponDiscount, totalDiscount, membershipFee, finalAmount, bankTax, total };
 };
 
 const CheckoutPanel = ({
@@ -173,11 +183,17 @@ const RegistrationFee = () => {
 
   const journalAmount = selectedJournal?.specialPrice || 0;
   const addonsAmount = selectedAddons.reduce((sum, a) => sum + a.price, 0);
-  const combinedBase = selectedBase ? selectedBase.value + journalAmount + addonsAmount : 0;
 
   const pricing = selectedBase
-    ? calculatePricing({ baseAmount: combinedBase, participantCategory, hasMembership: membership, hasCoupon: couponDiscount > 0 })
-    : { baseAmount: 0, membershipDiscount: 0, couponDiscount: 0, totalDiscount: 0, membershipFee: 0, finalAmount: 0, bankTax: 0, total: 0 };
+  ? calculatePricing({
+      baseAmount: selectedBase.value,   // base fee ONLY
+      journalAmount,                    // added after discount inside calculator
+      addonsAmount,                     // added after discount inside calculator
+      participantCategory,
+      hasMembership: membership,
+      hasCoupon: couponDiscount > 0,
+    })
+  : { baseAmount: 0, membershipDiscount: 0, couponDiscount: 0, totalDiscount: 0, membershipFee: 0, finalAmount: 0, bankTax: 0, total: 0 };
 
   const handleBaseSelect = (value, title, category) => setSelectedBase({ value, title, category });
 

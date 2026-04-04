@@ -181,6 +181,23 @@ const TermsAndConditions = () => {
       </div>
       <div
         data-aos="fade-up"
+        className="bg-linear-to-br from-blue-500 via-cyan-500 to-teal-500 text-white p-3 rounded-lg shadow-lg w-full"
+      >
+        <h2
+          data-aos="fade-up"
+          className="bg-white py-2 my-3 text-violet-600 rounded-md shadow-md text-2xl md:text-3xl text-center font-bold"
+        >
+          Program Slot Policy
+
+        </h2>
+        <p>
+          No changes to allocated slots will be allowed once the official program schedule (Agenda) is released.
+        </p>
+        
+        
+      </div>
+      <div
+        data-aos="fade-up"
         className="bg-linear-to-br from-blue-500 via-cyan-500 to-teal-500 text-white p-3 rounded-lg shadow-lg"
       >
         <h2
