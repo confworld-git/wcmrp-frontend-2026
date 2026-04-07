@@ -69,6 +69,31 @@ function Submission_Deadlines() {
             );
           })}
         </div>
+        <div className="bg-white  p-6 max-w-md w-full mx-auto mt-2">
+        {/* Title */}
+        {/* <h2 className="text-xl font-semibold mb-2">{title}</h2> */}
+
+        {/* Description */}
+        {/* <p className="text-gray-600 mb-6">{description}</p> */}
+
+        {/* Buttons */}
+        <div className="flex gap-4">
+          <a
+            href="/Submission"
+            className="flex-1 text-center !text-white py-2 rounded-lg bg-blue-700 hover:opacity-90 transition"
+          >
+            Submit Paper
+          </a>
+
+          <a
+            href="/RegistrationFee"
+            className="flex-1 text-center !text-white py-2 rounded-lg bg-orange-400 hover:opacity-90 transition"
+          >
+            Register Now
+          </a>
+        </div>
+        
+      </div>
         <p data-aos="fade-up" className="text-center text-white mt-5">
           For detailed submission guidelines, please visit the{" "}
           <a
