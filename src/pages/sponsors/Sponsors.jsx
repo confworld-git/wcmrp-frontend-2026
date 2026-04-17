@@ -174,7 +174,7 @@ const CorporateCards = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 pb-16 px-4 pt-12">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h3 className="text-4xl text-teal-500 font-bold mb-6 tracking-tight">Exhibits and Sponsorshtml</h3>
+          <h3 className="text-4xl text-teal-500 font-bold mb-6 tracking-tight">Exhibits and Sponsors</h3>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">

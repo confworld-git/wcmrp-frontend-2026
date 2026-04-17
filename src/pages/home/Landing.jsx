@@ -36,7 +36,7 @@ const Landing = () => {
                 <span className="h-5 w-5 md:h-6 md:w-6 bg-white rounded-full flex justify-center items-center text-[#292887]">
                   <HiMiniCalendarDateRange />
                 </span>
-                <span className="font-semibold text-xs sm:text-sm md:text-base text-white">27-28 May, 2026</span>
+                <span className="font-semibold text-xs sm:text-sm md:text-base text-white">29-30 May, 2026</span>
               </div>
               <div className="flex items-center gap-2 bg-[#524cf2] px-3 py-2 rounded-md shadow-md min-w-[160px] justify-center">
                 <span className="h-5 w-5 md:h-6 md:w-6 bg-white rounded-full flex justify-center items-center text-[#292887]">
