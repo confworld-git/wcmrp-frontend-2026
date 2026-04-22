@@ -8,6 +8,25 @@ export default function ConferenceCarousel() {
     {
       type: "Research article • Restricted access",
       title:
+        "Exploring the Interplay Between Parenting Style, Dark Triad, Cultural Capital, and Internet Addiction Disorders of College Students: A Cross-Cultural CBD Framework Analysis",
+      authors: "Jing Qiaoqiao, Muzi Li, Chew Fong Peng, Chan Wai Yin and Rusdi Abd Rashid",
+      publication: "Applied Research in Quality of Life",
+      year: "2026",
+      pages: "",
+    },
+    {
+      type: "Research article • Restricted access",
+      title:
+        "Women’s Economic Empowerment in Dhaka: Overcoming Gender-Based Challenges in Banking and Finance",
+      authors: "Rumpa Neogi, Arnab Bhattacharjee and Tanushree Biswas",
+      publication: "Human Arenas",
+      year: "2026",
+      pages: "",
+    },
+
+    {
+      type: "Research article • Restricted access",
+      title:
         "Evaluating the influence of courseware on online learning pedagogy at Pangasinan State University.",
       authors: "Angelou O Ramos",
       publication: "E-Learning and Digital Media",
@@ -29,6 +48,15 @@ export default function ConferenceCarousel() {
         "Redefining educational success: Analyzing the impact of closed management systems on student well-being and academic performance in Chinese technical education.",
       authors: "Jingkun Liu, Rovena I Dellova and Zhengxin Yi",
       publication: "E-Learning and Digital Media",
+      year: "2024",
+      pages: "",
+    },
+    {
+      type: "Research article • Restricted access",
+      title:
+        "Mechanism of PI3K-AKT Signaling Pathway Mediating Apoptosis of Periodontal Tissue Cells in Chronic Periodontitis",
+      authors: "Lan Dazhi, Pimporn Thongmuang, Sarisak Soontornchai and You Jianpeng",
+      publication: "International Journal of Environmental Sciences",
       year: "2024",
       pages: "",
     },
