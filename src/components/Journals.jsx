@@ -45,21 +45,22 @@ export default function ConferenceCarousel() {
     {
       type: "Research article • Restricted access",
       title:
+        "Mechanism of PI3K-AKT Signaling Pathway Mediating Apoptosis of Periodontal Tissue Cells in Chronic Periodontitis",
+      authors: "Lan Dazhi, Pimporn Thongmuang, Sarisak Soontornchai and You Jianpeng",
+      publication: "International Journal of Environmental Sciences",
+      year: "2025",
+      pages: "",
+    },
+    {
+      type: "Research article • Restricted access",
+      title:
         "Redefining educational success: Analyzing the impact of closed management systems on student well-being and academic performance in Chinese technical education.",
       authors: "Jingkun Liu, Rovena I Dellova and Zhengxin Yi",
       publication: "E-Learning and Digital Media",
       year: "2024",
       pages: "",
     },
-    {
-      type: "Research article • Restricted access",
-      title:
-        "Mechanism of PI3K-AKT Signaling Pathway Mediating Apoptosis of Periodontal Tissue Cells in Chronic Periodontitis",
-      authors: "Lan Dazhi, Pimporn Thongmuang, Sarisak Soontornchai and You Jianpeng",
-      publication: "International Journal of Environmental Sciences",
-      year: "2024",
-      pages: "",
-    },
+    
     {
       type: "Research article • Restricted access",
       title:
